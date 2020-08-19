@@ -23,7 +23,7 @@ body {
   margin: 0 auto;
   margin-top: 5%;
   height: 800px;   */
-    width: 75%;
+    width: 80%;
     background-color: #F2FCFC;
     display: flex;
     border-radius: 15px;
@@ -201,6 +201,7 @@ input[type="button"] {
     .main {
         width: fit-content;
         height: 1900px;
+        overflow: hidden;
     }
 }
 
