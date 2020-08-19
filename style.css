@@ -247,7 +247,7 @@ a.button1 {
     text-align: center;
     color: #FFFFFF;
     transition: all 0.2s;
-    margin-left: 43%;
+    margin-left: 40%;
     margin-top: 20px;
     width: 200px;
 }
@@ -257,4 +257,22 @@ a.button1 {
         display: block;
         margin: 0.4em auto;
     }
+    .error_message {
+        /* margin-right: 20px; */
+        /* margin-right: 5%; */
+    }
+}
+
+.error_message {
+    text-align: center;
+    /* width: 137px;
+    height: 21px; */
+    /* margin-left: 47%; */
+    margin-top: 10px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 21px;
+    color: #EE1A30;
 }
