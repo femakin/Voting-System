@@ -36,7 +36,7 @@ plusBtn.forEach(function(item) {
                 for (const Input_field of ALL_INPUT_FIELD) {
                     let resEl = {};
 
-                    [...country.querySelectorAll('span[class^="Contestant-"]')].forEach((span) => resEl[span.className.split('-')[1]] = Number(document.getElementById(span.id).innerHTML))
+                    [...Input_field.querySelectorAll('span[class^="Contestant-"]')].forEach((span) => resEl[span.className.split('-')[1]] = Number(document.getElementById(span.id).innerHTML))
                     result.push(resEl);
                 }
                 console.log(result)
