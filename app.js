@@ -22,6 +22,11 @@ plusBtn.forEach(function(item) {
             total.innerText = parseInt(total.innerText) - 1;
 
 
+            if (parseInt(total.innerText) < 0) {
+                return;
+            }
+            document.getElementById("bar").style.width = Math.round(10 * parseInt(total.innerText)) + "%";
+
             if (parseInt(total.innerText) == 0) {
                 const countries = document.querySelectorAll('.country');
 
@@ -73,6 +78,7 @@ minusBtn.forEach(function(item) {
         if (parseInt(item.previousElementSibling.innerText) > 0) {
             item.previousElementSibling.innerText = parseInt(item.previousElementSibling.innerText) - 1;
             total.innerText = parseInt(total.innerText) + 1;
+            document.getElementById("bar").style.width = Math.round(10 * parseInt(total.innerText)) + "%";
         }
     };
 });
