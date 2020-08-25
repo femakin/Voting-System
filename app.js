@@ -12,16 +12,17 @@ var value6 = document.getElementById('Contestant_Six');
 
 plusBtn.forEach(function(item) {
     item.onclick = function() {
+
+
+
         if (parseInt(total.innerText) > 0) {
 
-            console.log(item);
+            // console.log(item);
             item.nextElementSibling.innerText = parseInt(item.nextElementSibling.innerText) + 1;
             total.innerText = parseInt(total.innerText) - 1;
 
 
             if (parseInt(total.innerText) == 0) {
-
-
                 const countries = document.querySelectorAll('.country');
 
                 const result = [];
@@ -34,15 +35,30 @@ plusBtn.forEach(function(item) {
                     [...country.querySelectorAll('span[class^="Contestant-"]')].forEach((span) => resEl[span.className.split('-')[1]] = Number(document.getElementById(span.id).innerHTML))
                     result.push(resEl);
                 }
+                console.log(result)
 
-                let images = ["img1", "img2", "img3", "img4"]
-                for (var i = 0; i <= images.length; i++) {
-
-                }
+                let images = ["/img/Erica.png", "/img/ozo.png", "/img/Kidd.png", "/img/Dorathy.png", "/img/Vee.png", "/img/Laycon.png"]
 
                 const obj = Object.assign({}, ...result);
-                const sorted = Object.entries(obj).sort((a, b) => b[1] - a[1]);
-                const result1 = sorted.map(([Contestant, value], i) => ({ Contestant, value, id: i + 1, img: images[i] }));
+
+                const result1 = Object.entries(obj).map(([Contestant, value], i) => ({ Contestant, value, id: i + 1, img: images[i] }));
+                const sorted = result1.sort((a, b) => {
+                    if (a.value > b.value) return -1;
+                    else if (a.value < b.value) return 1;
+                    else return 0;
+                })
+
+
+                const stringifyObject = JSON.stringify(sorted);
+                window.localStorage.setItem('result', stringifyObject);
+
+
+
+                // var elem = document.createElement("img");
+                // elem.src = "result[0].img";
+                // document.getElementById("image_display").appendChild(elem);
+                document.getElementById("image_display").innerHTML = '<img src="' + result1[0].img + '">';
+
 
                 console.log(result1);
 

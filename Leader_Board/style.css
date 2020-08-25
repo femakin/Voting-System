@@ -166,8 +166,8 @@
             background: #1E2A5A;
             padding: 0.35em 1.5em;
             border: 0.1em solid #FFFFFF;
-            margin: 0 0.3em 0.3em 0;
-            border-radius: 0.12em;
+            /* margin: 0 0.3em 0.3em 40em; */
+            margin: 50% 90%;
             box-sizing: border-box;
             text-decoration: none;
             font-family: Roboto;
@@ -179,7 +179,7 @@
             text-align: center;
             color: #FFFFFF;
             transition: all 0.2s;
-            margin-left: 31rem;
+            /* margin-left: 0 auto; */
             margin-top: 20px;
             width: 200px;
         }
@@ -187,7 +187,7 @@
         @media all and (max-width:30em) {
             a.button1 {
                 display: block;
-                margin: 0.2em auto;
+                margin: 0.4em auto;
             }
             .error_message {
                 /* margin-right: 20px; */
