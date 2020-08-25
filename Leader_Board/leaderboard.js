@@ -11,3 +11,8 @@ parseLeaderBoard.map((value, index) => {
     getName[index].innerHTML = value.Contestant;
 
 })
+
+// document.getElementById("image_display").innerHTML = '<img src="' + result1[0].img + '">';
+getLastLeaderBoard = parseLeaderBoard[parseLeaderBoard.length - 1];
+console.log(getLastLeaderBoard);
+document.querySelector('.error_message').innerHTML = `${getLastLeaderBoard.Contestant} was evicted`;

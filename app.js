@@ -62,7 +62,7 @@ plusBtn.forEach(function(item) {
                 // var elem = document.createElement("img");
                 // elem.src = "result[0].img";
                 // document.getElementById("image_display").appendChild(elem);
-                document.getElementById("image_display").innerHTML = '<img src="' + result1[0].img + '">';
+
 
 
                 console.log(result1);
