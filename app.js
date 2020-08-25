@@ -14,7 +14,6 @@ plusBtn.forEach(function(item) {
     item.onclick = function() {
 
 
-
         if (parseInt(total.innerText) > 0) {
 
             // console.log(item);
@@ -28,13 +27,13 @@ plusBtn.forEach(function(item) {
             document.getElementById("bar").style.width = Math.round(10 * parseInt(total.innerText)) + "%";
 
             if (parseInt(total.innerText) == 0) {
-                const countries = document.querySelectorAll('.country');
+                const ALL_INPUT_FIELD = document.querySelectorAll('Input_field');
 
                 const result = [];
 
 
 
-                for (const country of countries) {
+                for (const Input_field of ALL_INPUT_FIELD) {
                     let resEl = {};
 
                     [...country.querySelectorAll('span[class^="Contestant-"]')].forEach((span) => resEl[span.className.split('-')[1]] = Number(document.getElementById(span.id).innerHTML))
@@ -56,14 +55,6 @@ plusBtn.forEach(function(item) {
 
                 const stringifyObject = JSON.stringify(sorted);
                 window.localStorage.setItem('result', stringifyObject);
-
-
-
-                // var elem = document.createElement("img");
-                // elem.src = "result[0].img";
-                // document.getElementById("image_display").appendChild(elem);
-
-
 
                 console.log(result1);
 
