@@ -22,12 +22,12 @@ plusBtn.forEach(function(item) {
 
 
             if (parseInt(total.innerText) < 0) {
-                return;
+                // return;
             }
             document.getElementById("bar").style.width = Math.round(10 * parseInt(total.innerText)) + "%";
 
             if (parseInt(total.innerText) == 0) {
-                const ALL_INPUT_FIELD = document.querySelectorAll('Input_field');
+                const ALL_INPUT_FIELD = document.querySelectorAll('.Input_field');
 
                 const result = [];
 
@@ -39,7 +39,8 @@ plusBtn.forEach(function(item) {
                     [...Input_field.querySelectorAll('span[class^="Contestant-"]')].forEach((span) => resEl[span.className.split('-')[1]] = Number(document.getElementById(span.id).innerHTML))
                     result.push(resEl);
                 }
-                console.log(result)
+                console.log(result);
+
 
                 let images = ["/img/Erica.png", "/img/ozo.png", "/img/Kidd.png", "/img/Dorathy.png", "/img/Vee.png", "/img/Laycon.png"]
 
